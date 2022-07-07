@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="http://127.0.0.1:5501/sub.html" onsubmit="validateInputs()">
+            <h1>Registration</h1>
+            <div class="input-control" onkeyup="validateInputs()">
+                <label for="firstname">First Name</label>
+                <input id="firstname" name="firstname" type="text" onkeypress="return AvoidSpace(event)">
+                <div class="error"></div>
+            </div>
+            <div class="input-control" onkeyup="validateInputs()" >
+                <label for="middelname">Middel Name</label>
+                <input id="middelname" name="middelname" type="text" onkeypress="return AvoidSpace(event)">
+                <div class="error"></div>
+            </div>
+            <div class="input-control" onkeyup="validateInputs()" >
+                <label for="lasttname">Last Name</label>
+                <input id="lastname" name="lastname" type="text" onkeypress="return AvoidSpace(event)">
+                <div class="error"></div>
+            </div>
+            <div class="input-control" onkeyup="validateInputs()">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" onkeypress="return AvoidSpace(event)">
+                <div class="error"></div>
+            </div>
+            <div class="input-control" onkeyup="validateInputs()">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="number" onkeypress="return AvoidSpace(event)">
+                <div class="error"></div>
+            </div>
+            <div class="input-control" onkeyup="validateInputs()">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password" onkeypress="return AvoidSpace(event)">
+                <div class="error"></div>
+            </div>
+            <div class="input-control" onkeyup="validateInputs()">
+                <label for="password2">Confirm Password</label>
+                <input id="password2"name="password2" type="password" onkeypress="return AvoidSpace(event)">
+                <div class="error"></div>
+            </div>
+            <button id="submit" type="submit">Sign Up</button>
+            <p id="next">
+                Already Register?<a href="login.html">Log In</a>
+            </p>
+        </form>
+    </div>
+    <!-- <table id="table">
+        <tr>
+          <th class="table1">Username</th>
+          <th class="table1">Email</th>
+          <th class="table1">Phone</th>
+          <th class="table1">Password</th>
+          <th class="table1">Password2</th>
+        </tr>
+      </table> -->
+</body>
+</html>
